@@ -62,7 +62,7 @@ def find_phone_numbers(file_path):
         soup = BeautifulSoup(r.content, 'html.parser')
     
         phone_numbers = set()
-        pattern = re.compile(r'8\d{10}')  # Паттерн для нахождения российских номеров телефонов
+        pattern = re.compile(r'8\d{10}')
     
         for script in soup(['script', 'style']):
             script.extract()  # Удаляем все скрипты и стили из HTML
